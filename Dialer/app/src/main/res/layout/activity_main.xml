@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/speed_dial1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/btn_mem1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintEnd_toStartOf="@+id/speed_dial2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/speed_dial2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/btn_mem2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/speed_dial3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/btn_mem3"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/speed_dial2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="phone"
+        android:ems="12"
+        android:hint="@string/phone_number_hint"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:text="@string/number"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhone"
+        app:layout_constraintVertical_bias="0.05">
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/btn1_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/btn2_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/btn3_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout1"
+        app:layout_constraintVertical_bias="0.05">
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/btn4_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/btn5_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/btn6_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintVertical_bias="0.05">
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/btn7_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/btn8_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/btn9_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableLayout4"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout3"
+        app:layout_constraintVertical_bias="0.05">
+
+        <Button
+            android:id="@+id/btn_ast"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/btn_ast_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/btn0_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            app:cornerRadius="20dp" />
+
+        <Button
+            android:id="@+id/btn_cardinal"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/teal_700"
+            android:text="@string/btn_card_text"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tableLayout5"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout4"
+        app:layout_constraintVertical_bias="0.05">
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1.5"
+            android:backgroundTint="#4CAF50"
+            android:drawableEnd="@android:drawable/stat_sys_phone_call"
+            android:text="@string/btn_call_text"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number_text"
+            style="?android:attr/buttonBarButtonStyle">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_del"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:backgroundTint="#F44336"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/del"
+            android:textSize="14sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/call_btn"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number_text" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

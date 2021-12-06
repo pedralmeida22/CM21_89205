@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Dialer</string>
+    <string name="btn0_text">0</string>
+    <string name="btn1_text">1</string>
+    <string name="btn2_text">2</string>
+    <string name="btn3_text">3</string>
+    <string name="btn4_text">4</string>
+    <string name="btn5_text">5</string>
+    <string name="btn6_text">6</string>
+    <string name="btn7_text">7</string>
+    <string name="btn8_text">8</string>
+    <string name="btn9_text">9</string>
+    <string name="btn_ast_text">*</string>
+    <string name="btn_card_text">#</string>
+    <string name="btn_call_text">Call</string>
+    <string name="number"></string>
+    <string name="del">del</string>
+    <string name="phone_number_hint">Phone number</string>
+    <string name="btn_mem1">Dial 1</string>
+    <string name="btn_mem2">Dial 2</string>
+    <string name="btn_mem3">Dial 3</string>
+    <string name="edit_contact">Edit contact</string>
+    <string name="name">Name:</string>
+    <string name="insert_name">Insert name</string>
+    <string name="phone">Phone:</string>
+    <string name="insert_phone_number">Insert phone number</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+</resources>
