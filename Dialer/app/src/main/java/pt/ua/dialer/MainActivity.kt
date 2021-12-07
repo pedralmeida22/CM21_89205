@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        setSupportActionBar(findViewById(R.id.toolbar))
+
         val number = findViewById<TextView>(R.id.editTextPhone)
         val btn0 = findViewById<Button>(R.id.btn0)
         val btn1 = findViewById<Button>(R.id.btn1)
@@ -92,7 +94,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnDel.setOnClickListener {
-            var numberText = number.text.toString()
+            val numberText = number.text.toString()
 
             if (numberText.isNotEmpty()) {
                 number.text = numberText.subSequence(0, numberText.length - 1)
@@ -196,7 +198,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateNumber(string: String){
         val number = findViewById<TextView>(R.id.editTextPhone)
-        var numberText = number.text.toString()
+        val numberText = number.text.toString()
 
         number.text = numberText + string
     }

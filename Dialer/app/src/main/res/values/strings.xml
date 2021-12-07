@@ -26,5 +26,6 @@
     <string name="insert_phone_number">Insert phone number</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="clear">Clear</string>
 
 </resources>
