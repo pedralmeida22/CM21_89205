@@ -40,9 +40,11 @@ class SpeedDialEdit : AppCompatActivity() {
             val myToast = Toast.makeText(this, "Clear", Toast.LENGTH_SHORT)
             myToast.show()
 
-            Intent(this, MainActivity::class.java).apply {
-                startActivity(this)
-            }
+//            Intent(this, MainActivity::class.java).apply {
+//                startActivity(this)
+//            }
+
+            finish()
         }
     }
 
@@ -73,9 +75,9 @@ class SpeedDialEdit : AppCompatActivity() {
                 val myToast = Toast.makeText(this, "Saved", Toast.LENGTH_SHORT)
                 myToast.show()
 
-//                finish()
-                val changeActivity = Intent(this, MainActivity::class.java)
-                startActivity(changeActivity)
+                finish()
+//                val changeActivity = Intent(this, MainActivity::class.java)
+//                startActivity(changeActivity)
             }
 
             true

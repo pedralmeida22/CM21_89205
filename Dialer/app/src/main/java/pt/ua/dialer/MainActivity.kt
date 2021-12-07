@@ -18,6 +18,17 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(findViewById(R.id.toolbar))
 
+        init()
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        init()
+    }
+
+    private fun init(){
         val number = findViewById<TextView>(R.id.editTextPhone)
         val btn0 = findViewById<Button>(R.id.btn0)
         val btn1 = findViewById<Button>(R.id.btn1)
@@ -42,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         readContactNameFromSharedPreferences(btnSpeedDial3)
 
         btn0.setOnClickListener {
-           updateNumber(btn0.text.toString())
+            updateNumber(btn0.text.toString())
         }
 
         btn1.setOnClickListener {
@@ -145,7 +156,6 @@ class MainActivity : AppCompatActivity() {
             changeActivity(btnSpeedDial3.id)
             true
         }
-
     }
 
     private fun changeActivity(btnID: Int){
