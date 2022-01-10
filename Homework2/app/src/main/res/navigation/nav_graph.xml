@@ -24,5 +24,9 @@
         <action
             android:id="@+id/action_SecondFragment_to_CitiesFragment"
             app:destination="@id/CitiesFragment" />
+        <argument
+            android:name="city"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>

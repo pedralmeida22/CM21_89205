@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import pt.ua.homework2.databinding.FragmentSecondBinding
 
 /**
@@ -14,6 +15,8 @@ import pt.ua.homework2.databinding.FragmentSecondBinding
 class SecondFragment : Fragment() {
 
     private var _binding: FragmentSecondBinding? = null
+
+    val args: SecondFragmentArgs by navArgs()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,6 +28,10 @@ class SecondFragment : Fragment() {
     ): View? {
 
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
+
+        val text = args.city
+        binding.textviewSecond.text = text
+
         return binding.root
 
     }

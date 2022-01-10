@@ -1,12 +1,13 @@
 package pt.ua.homework2
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import pt.ua.homework2.databinding.FragmentCitiesBinding
 
@@ -21,6 +22,7 @@ class CitiesFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,19 +30,29 @@ class CitiesFragment : Fragment() {
 
         _binding = FragmentCitiesBinding.inflate(inflater, container, false)
 
-
         val viewModelFactory = CitiesViewModelFactory()
         val viewModel = ViewModelProvider(this, viewModelFactory).get(CitiesViewModel::class.java)
 
         val list = viewModel.generateDummyList(100)
 
+        val adapter = CitiesListAdapter(list)
+
         val recyclerView = binding.recyclerView
-        recyclerView.adapter = CitiesListAdapter(list)
+        recyclerView.adapter = adapter
         recyclerView.hasFixedSize()
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        return binding.root
+        adapter.setOnClickListener(object : CitiesListAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                Log.e("INFO", "you clicked $position")
 
+                val action = CitiesFragmentDirections.actionCitiesFragmentToSecondFragment(position.toString())
+
+                view?.findNavController()?.navigate(action)
+            }
+        })
+
+        return binding.root
     }
 
 /*    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
