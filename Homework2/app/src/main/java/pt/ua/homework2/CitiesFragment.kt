@@ -33,7 +33,9 @@ class CitiesFragment : Fragment() {
         val viewModelFactory = CitiesViewModelFactory()
         val viewModel = ViewModelProvider(this, viewModelFactory).get(CitiesViewModel::class.java)
 
-        val list = viewModel.generateDummyList(100)
+//        val list = viewModel.generateDummyList(100)
+        val cities = viewModel.mapCities
+        val list = viewModel.citiesList().toList()
 
         val adapter = CitiesListAdapter(list)
 
@@ -46,7 +48,9 @@ class CitiesFragment : Fragment() {
             override fun onItemClick(position: Int) {
                 Log.e("INFO", "you clicked $position")
 
-                val action = CitiesFragmentDirections.actionCitiesFragmentToSecondFragment(position.toString())
+                val data = cities[list[position]]
+
+                val action = CitiesFragmentDirections.actionCitiesFragmentToSecondFragment(data)
 
                 view?.findNavController()?.navigate(action)
             }
